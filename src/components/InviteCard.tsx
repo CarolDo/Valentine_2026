@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import Image from 'next/image';
 import loveConfig from '@/config/loveConfig';
 import styles from './InviteCard.module.css';
 
@@ -135,6 +136,17 @@ END:VCALENDAR`;
     >
       <div className={styles.inviteCard}>
         <h2 className={styles.inviteTitle}>{loveConfig.inviteTitle}</h2>
+        
+        <div className={styles.catRoseContainer}>
+          <Image 
+            src="/cat-rose.gif" 
+            alt="Cat with rose"
+            width={200}
+            height={200}
+            className={styles.catRoseGif}
+            unoptimized
+          />
+        </div>
         
         <div className={styles.inviteDetails}>
           <div className={styles.detailItem}>

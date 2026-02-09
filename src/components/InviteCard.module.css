@@ -88,6 +88,24 @@
   background-clip: text;
 }
 
+/* Cat with rose decoration */
+.catRoseContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  animation: bounceIn 1.2s ease-out;
+}
+
+.catRoseGif {
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(230, 57, 70, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.catRoseGif:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
 /* Invite details */
 .inviteDetails {
   display: flex;
