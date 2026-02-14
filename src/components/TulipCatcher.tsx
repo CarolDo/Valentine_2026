@@ -24,7 +24,8 @@ export default function TulipCatcher({ onComplete, gameCompleted }: TulipCatcher
   const [confetti, setConfetti] = useState<Array<{ id: number; x: number; y: number }>>([]);
   const gameAreaRef = useRef<HTMLDivElement>(null);
   const nextIdRef = useRef(0);
-  const animationFrameRef = useRef<number>();
+const animationFrameRef = useRef<number | undefined>(undefined);
+
 
   const TARGET_SCORE = 10;
 
