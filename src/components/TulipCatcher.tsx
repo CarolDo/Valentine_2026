@@ -24,8 +24,7 @@ export default function TulipCatcher({ onComplete, gameCompleted }: TulipCatcher
   const [confetti, setConfetti] = useState<Array<{ id: number; x: number; y: number }>>([]);
   const gameAreaRef = useRef<HTMLDivElement>(null);
   const nextIdRef = useRef(0);
-const animationFrameRef = useRef<number | undefined>(undefined);
-
+  const animationFrameRef = useRef<number | undefined>(undefined);
 
   const TARGET_SCORE = 10;
 
@@ -34,32 +33,29 @@ const animationFrameRef = useRef<number | undefined>(undefined);
       const spawnTulip = () => {
         const newTulip: Tulip = {
           id: nextIdRef.current++,
-          x: Math.random() * 85 + 5, // 5-90% to keep within bounds with padding
+          x: Math.random() * 85 + 5,
           y: -10,
-          speed: 0.3 + Math.random() * 1, // Much slower: 0.3 to 0.7
+          speed: 0.3 + Math.random() * 1,
         };
         setTulips(prev => [...prev, newTulip]);
       };
 
-      // Spawn tulips less frequently
       const spawnInterval = setInterval(spawnTulip, 400);
 
-      // Animation loop for moving tulips (throttled)
       let lastTime = Date.now();
       const animate = () => {
         const now = Date.now();
         const delta = now - lastTime;
-        
-        // Update every 16ms (roughly 60fps) but with slower movement
+
         if (delta > 16) {
-          setTulips(prev => {
-            return prev
+          setTulips(prev =>
+            prev
               .map(tulip => ({ ...tulip, y: tulip.y + tulip.speed }))
-              .filter(tulip => tulip.y < 110); // Remove tulips that went off screen
-          });
+              .filter(tulip => tulip.y < 110)
+          );
           lastTime = now;
         }
-        
+
         animationFrameRef.current = requestAnimationFrame(animate);
       };
 
@@ -67,7 +63,7 @@ const animationFrameRef = useRef<number | undefined>(undefined);
 
       return () => {
         clearInterval(spawnInterval);
-        if (animationFrameRef.current) {
+        if (animationFrameRef.current !== undefined) {
           cancelAnimationFrame(animationFrameRef.current);
         }
       };
@@ -78,7 +74,7 @@ const animationFrameRef = useRef<number | undefined>(undefined);
     if (score >= TARGET_SCORE && !showVictory) {
       setShowVictory(true);
       onComplete();
-      // Create confetti
+
       const newConfetti = Array.from({ length: 50 }, (_, i) => ({
         id: i,
         x: Math.random() * 100,
@@ -93,8 +89,7 @@ const animationFrameRef = useRef<number | undefined>(undefined);
     e.stopPropagation();
     setTulips(prev => prev.filter(t => t.id !== tulipId));
     setScore(prev => prev + 1);
-    
-    // Haptic feedback on mobile
+
     if ('vibrate' in navigator) {
       navigator.vibrate(50);
     }
@@ -192,7 +187,7 @@ const animationFrameRef = useRef<number | undefined>(undefined);
                   🌷
                 </button>
               ))}
-              
+
               {tulips.length === 0 && (
                 <div className={styles.waitingMessage}>
                   Get ready! Tulips are coming... 🌷
