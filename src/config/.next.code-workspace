@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../.next"
+		},
+		{
+			"path": "../../node_modules"
+		},
+		{
+			"path": "../../public"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../.git"
+		},
+		{
+			"path": "../../.github"
+		}
+	]
+}

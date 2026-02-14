@@ -60,7 +60,7 @@ export default function TimeCounter() {
           <div className={styles.icon}>⏰</div>
           <h2 className={styles.title}>Time We've Shared</h2>
           <p className={styles.subtitle}>
-            Every second with you is a treasure
+            Every second with you is a blessing
           </p>
 
           <div className={styles.counterGrid}>
@@ -90,7 +90,7 @@ export default function TimeCounter() {
           </div>
 
           <p className={styles.message}>
-            ...and counting! Here's to infinity more moments together💕
+            ...and counting -u- Here's to more moments together, my pooks💕
           </p>
         </div>
       </div>

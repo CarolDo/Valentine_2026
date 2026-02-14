@@ -1,8 +1,6 @@
-# 💕 Valentine's Day Romantic Website Template
+# 💕 Valentine's
+Built with Next.js 14, TypeScript, and optimized for easy deployment on Vercel.
 
-A beautiful, interactive Valentine's Day website template with parallax scrolling, photo timeline, mini-game, and invitation reveal. Built with Next.js 14, TypeScript, and optimized for easy deployment on Vercel.
-
-**Perfect for creating a personalized romantic gift for your special someone!**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
@@ -10,10 +8,6 @@ A beautiful, interactive Valentine's Day website template with parallax scrollin
 
 ## 📚 Documentation
 
-- **[Setup Guide](SETUP.md)** - Complete step-by-step setup instructions
-- **[Quick Start](QUICKSTART.md)** - Get running in 5 minutes
-- **[Deployment Guide](DEPLOYMENT.md)** - Deploy to Vercel
-- **[Pre-Launch Checklist](CHECKLIST.md)** - Before you share with your valentine
 
 ## ✨ Features
 
@@ -33,7 +27,7 @@ A beautiful, interactive Valentine's Day website template with parallax scrollin
 
 > **Note**: See [SETUP.md](SETUP.md) for instructions on running a local demo
 
-Once deployed, your website will feature:
+Once deployed, website will feature:
 1. A romantic landing page with animations
 2. Real-time counter of your time together
 3. Scrollable photo timeline with your memories
@@ -103,7 +97,7 @@ Once deployed, your website will feature:
 
 ### Important: Photo Setup
 
-Your photos must be placed in the `/public/photos/` folder with the following naming convention:
+Photos must be placed in the `/public/photos/` folder with the following naming convention:
 
 ```
 /public/photos/photo_1.jpg
