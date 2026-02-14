@@ -23,7 +23,7 @@ Built with Next.js 14, TypeScript, and optimized for easy deployment on Vercel.
 - **No Database Required** - static site, easy to deploy
 - **TypeScript** - type-safe development experience
 
-## 🎥 Demo
+## 🎥 Demo -u-
 
 > **Note**: See [SETUP.md](SETUP.md) for instructions on running a local demo
 
