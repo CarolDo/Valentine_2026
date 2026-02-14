@@ -41,7 +41,7 @@ next-env.d.ts
 
 # Personal configuration (keep your personal info private!)
 # Remove this section if you want to track your config
-src/config/loveConfig.ts
+
 
 # Personal photos (keep your photos private!)
 # Remove this section if you want to track your photos
